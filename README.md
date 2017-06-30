@@ -62,7 +62,7 @@ I used a combination of color and gradient thresholds to generate a binary image
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
-The code for this step is contained in `4. Warp with Perspective Transform` Section of the IPython notebook [Advanced-Lane-Lines.ipynb](Advanced-Lane-Lines.ipynb) ,The code for the perspective transform function `perspective_transform()` includes a function called `drawQuad()`. The `perspective_transform()` function takes as inputs an image (`img`), as well as source (`src`) and destination (`dst`) points.  I chose the hardcode the source and destination points in the following manner:
+The code for this step is contained in `4. Warp with Perspective Transform` Section of the IPython notebook [Advanced-Lane-Lines.ipynb](Advanced-Lane-Lines.ipynb) . The code for the perspective transform function `perspective_transform()` includes a function called `drawQuad()`. The `perspective_transform()` function takes as inputs an image (`img`), as well as source (`src`) and destination (`dst`) points.  I chose the hardcode the source and destination points in the following manner:
 
 ```python
 src = np.float32(
