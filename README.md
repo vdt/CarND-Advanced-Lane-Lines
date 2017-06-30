@@ -37,7 +37,7 @@ You're reading it!
 
 #### 1. Briefly state how you computed the camera matrix and distortion coefficients. Provide an example of a distortion corrected calibration image.
 
-The code for this step is contained in the first code cell of the IPython notebook [Advanced-Lane-Lines.ipynb](Advanced-Lane-Lines.ipynb).  
+The code for this step is contained in `1. Camera Calibration` and `2. Distortion Correction` Section of the IPython notebook [Advanced-Lane-Lines.ipynb](Advanced-Lane-Lines.ipynb).  
 
 I start by preparing "object points", which will be the (x, y, z) coordinates of the chessboard corners in the world. Here I am assuming the chessboard is fixed on the (x, y) plane at z=0, such that the object points are the same for each calibration image.  Thus, `objp` is just a replicated array of coordinates, and `objpoints` will be appended with a copy of it every time I successfully detect all chessboard corners in a test image.  `imgpoints` will be appended with the (x, y) pixel position of each of the corners in the image plane with each successful chessboard detection.  
 
@@ -54,13 +54,15 @@ To demonstrate this step, I will describe how I apply the distortion correction 
 
 #### 2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
 
-I used a combination of color and gradient thresholds to generate a binary image (thresholding steps at lines # through # in `another_file.py`).  Here's an example of my output for this step.  (note: this is not actually from one of the test images)
+The code for this step is contained in `3. Color and Gradient Threshold` Section of the IPython notebook [Advanced-Lane-Lines.ipynb](Advanced-Lane-Lines.ipynb).
+
+I used a combination of color and gradient thresholds to generate a binary image . Here's an example of my output for this step.  (note: this is not actually from one of the test images)
 
 ![alt text][image3]
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
-The code for my perspective transform includes a function called `warper()`, which appears in lines 1 through 8 in the file `example.py` (output_images/examples/example.py) (or, for example, in the 3rd code cell of the IPython notebook).  The `warper()` function takes as inputs an image (`img`), as well as source (`src`) and destination (`dst`) points.  I chose the hardcode the source and destination points in the following manner:
+The code for this step is contained in `4. Warp with Perspective Transform` Section of the IPython notebook [Advanced-Lane-Lines.ipynb](Advanced-Lane-Lines.ipynb) ,The code for the perspective transform function `perspective_transform()` includes a function called `drawQuad()`. The `perspective_transform()` function takes as inputs an image (`img`), as well as source (`src`) and destination (`dst`) points.  I chose the hardcode the source and destination points in the following manner:
 
 ```python
 src = np.float32(
