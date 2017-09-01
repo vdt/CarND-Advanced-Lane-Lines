@@ -61,7 +61,7 @@ The code for this step is contained in `3. Color and Gradient Threshold` Section
 
 I used a combination of color and gradient thresholds to generate a binary image . Here's an example of my output for this step.  (note: this is not actually from one of the test images)
 
-![alt text][image3a]
+![alt text][image3]
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
@@ -97,7 +97,7 @@ I verified that my perspective transform was working as expected by drawing the 
 
 Then I did some other stuff and fit my lane lines with a 2nd order polynomial kinda like this:
 
-![alt text][image5]
+![alt text][image3a]
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
