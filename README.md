@@ -61,7 +61,7 @@ The code for this step is contained in `3. Color and Gradient Threshold` Section
 
 I used a combination of color and gradient thresholds to generate a binary image . Here's an example of my output for this step.  (note: this is not actually from one of the test images)
 
-![alt text][image3]
+![alt text][image3a]
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
