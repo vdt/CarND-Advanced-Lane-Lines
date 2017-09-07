@@ -60,36 +60,13 @@ To demonstrate this step, I will describe how I apply the distortion correction 
 
 The code for this step is contained in `3. Color and Gradient Threshold` Section of the IPython notebook [Advanced-Lane-Lines.ipynb](Advanced-Lane-Lines.ipynb).
 
-I used a combination of color and gradient thresholds to generate a binary image . Here's an example of my output for this step.  (note: this is not actually from one of the test images)
+I used a combination of color and gradient thresholds to generate a binary image . Here's an example of my output for this step. 
 
 ![alt text][image3a1]
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
-The code for this step is contained in `4. Warp with Perspective Transform` Section of the IPython notebook [Advanced-Lane-Lines.ipynb](Advanced-Lane-Lines.ipynb) . The code for the perspective transform function `perspective_transform()` includes a function called `drawQuad()`. The `perspective_transform()` function takes as inputs an image (`img`), as well as source (`src`) and destination (`dst`) points.  I chose the hardcode the source and destination points in the following manner:
-
-```python
-src = np.float32(
-    [[(img_size[0] / 2) - 55, img_size[1] / 2 + 100],
-    [((img_size[0] / 6) - 10), img_size[1]],
-    [(img_size[0] * 5 / 6) + 60, img_size[1]],
-    [(img_size[0] / 2 + 55), img_size[1] / 2 + 100]])
-dst = np.float32(
-    [[(img_size[0] / 4), 0],
-    [(img_size[0] / 4), img_size[1]],
-    [(img_size[0] * 3 / 4), img_size[1]],
-    [(img_size[0] * 3 / 4), 0]])
-```
-
-This resulted in the following source and destination points:
-
-| Source        | Destination   | 
-|:-------------:|:-------------:| 
-| 585, 460      | 320, 0        | 
-| 203, 720      | 320, 720      |
-| 1127, 720     | 960, 720      |
-| 695, 460      | 960, 0        |
-
+The code for this step is contained in `4. Warp with Perspective Transform` Section of the IPython notebook [Advanced-Lane-Lines.ipynb](Advanced-Lane-Lines.ipynb) . The code for the perspective transform function `perspective_transform()` includes a function called `drawQuad()`. The `get_perspective_rectangles()` in `7. Calculate Curvature` Section of the IPython notebook [Advanced-Lane-Lines.ipynb](Advanced-Lane-Lines.ipynb), takes as inputs an image (`img`), and returns (`src`) and destination (`dst`) points.  The output of the same is given in 'Out[15]: of the IPython notebook
 I verified that my perspective transform was working as expected by drawing the `src` and `dst` points onto a test image and its warped counterpart to verify that the lines appear parallel in the warped image.
 
 ![alt text][image3a]
