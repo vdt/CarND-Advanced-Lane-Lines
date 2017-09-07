@@ -17,6 +17,7 @@ The goals / steps of this project are the following:
 [image1a]: ./output_images/undistorted.png "Undistorted"
 [image1b]: ./output_images/distorted.png "Distorted"
 [image2]: ./test_images/test1.jpg "Road Transformed"
+[image3a1]: ./output_images/thresholded1.png "Binary Example"
 [image3a]: ./output_images/thresholded-gradient-direction.png "Binary Example"
 [image3]: ./examples/binary_combo_example.jpg "Binary Example"
 [image4]: ./examples/warped_straight_lines.jpg "Warp Example"
@@ -61,7 +62,7 @@ The code for this step is contained in `3. Color and Gradient Threshold` Section
 
 I used a combination of color and gradient thresholds to generate a binary image . Here's an example of my output for this step.  (note: this is not actually from one of the test images)
 
-![alt text][image3]
+![alt text][image3a1]
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
