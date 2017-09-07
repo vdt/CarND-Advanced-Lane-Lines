@@ -66,7 +66,7 @@ I used a combination of color and gradient thresholds to generate a binary image
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
-The code for this step is contained in `4. Warp with Perspective Transform` Section of the IPython notebook [Advanced-Lane-Lines.ipynb](Advanced-Lane-Lines.ipynb) . The code for the perspective transform function `perspective_transform()` includes a function called `drawQuad()`. The `get_perspective_rectangles()` in `7. Calculate Curvature` Section of the IPython notebook [Advanced-Lane-Lines.ipynb](Advanced-Lane-Lines.ipynb), takes as inputs an image (`img`), and returns (`src`) and destination (`dst`) points.  The output of the same is given in 'Out[15]:' of the IPython notebook
+The code for this step is contained in `4. Warp with Perspective Transform` Section of the IPython notebook [Advanced-Lane-Lines.ipynb](Advanced-Lane-Lines.ipynb) . The code for the perspective transform function `perspective_transform()` includes a function called `drawQuad()`. The `get_perspective_rectangles()` in `7. Calculate Curvature` Section of the IPython notebook [Advanced-Lane-Lines.ipynb](Advanced-Lane-Lines.ipynb), takes as inputs an image (`img`), and returns (`src`) and destination (`dst`) points.  The output of the same is given in `Out[15]:` of the IPython notebook
 I verified that my perspective transform was working as expected by drawing the `src` and `dst` points onto a test image and its warped counterpart to verify that the lines appear parallel in the warped image.
 
 ![alt text][image3a]
