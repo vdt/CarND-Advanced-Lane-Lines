@@ -73,13 +73,13 @@ I verified that my perspective transform was working as expected by drawing the 
 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
-Then I did some other stuff and fit my lane lines with a 2nd order polynomial kinda like this:
+We first check the histogram of the lower of image and find the two peaks for the left and right lines. Then we use the sliding window method to work our way upwards and find the relevant points in the image which mark the lane. Next, we use the np.polyfit() method to fit a second degree polynomial to these points. I did this in the fit_polynomials() function.
 
 
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
-I did this in lines # through # in my code in `my_other_file.py`
+Given the detected points, we determine a second degree polynomial that fits these points, and then we calculate the radius of curvature of this polynomial. Also, we convert from the pixel space to real space in meters. I did this in get_curvature() function.
 
 #### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
@@ -101,4 +101,8 @@ Here's a [link to my video result](./project_output.mp4)
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
+It is a Challenge to select optimum parameters for the gradient thresholds because we want to do it in a way that works for a wide number of scenarios. This was achieved by testing it on the 6 test images that are given.
+
+The pipeline fails on  test images, mostly because we don't keep state of previous video frames as of now. We can make the processing more efficient by making it remember the last detected lane line and then using that as a hint for detecting the lane in the next video frame.
+
+To make the pipeline more robust, we should add checks like checking that the radius of curvature is similar for both the left and right lane lines. Also, it should continue to work if just a single lane line is visible.  
