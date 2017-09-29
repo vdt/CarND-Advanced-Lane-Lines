@@ -79,7 +79,7 @@ We first check the histogram of the lower of image and find the two peaks for th
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
-Given the detected points, we determine a second degree polynomial that fits these points, and then we calculate the radius of curvature of this polynomial. Also, we convert from the pixel space to real space in meters. I did this in get_curvature() function.
+Given the detected points, we determine a second degree polynomial that fits these points, and then we calculate the radius of curvature of this polynomial. Also, we convert from the pixel space to real space in meters. I did this in `get_curvature()` function in `7. Calculate Curvature` of the Jupyter Notebbok .
 
 #### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
