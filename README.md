@@ -73,7 +73,7 @@ I verified that my perspective transform was working as expected by drawing the 
 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
-We first check the histogram of the lower of image and find the two peaks for the left and right lines. Then we use the sliding window method to work our way upwards and find the relevant points in the image which mark the lane. Next, we use the np.polyfit() method to fit a second degree polynomial to these points. I did this in the fit_polynomials() function.
+We first check the histogram of the lower of image and find the two peaks for the left and right lines. Then we use the sliding window method to work our way upwards and find the relevant points in the image which mark the lane. Next, we use the `np.polyfit()` method to fit a second degree polynomial to these points in the `fit_polynomials()` function in `6. Sliding Window and Fit Polynomial` of the Jupyter Notebook .
 
 
 
