@@ -74,13 +74,13 @@ I verified that my perspective transform was working as expected by drawing the 
 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
-We first check the histogram of the lower of image and find the two peaks for the left and right lines. Then we use the sliding window method to work our way upwards and find the relevant points in the image which mark the lane. Next, we use the `np.polyfit()` method to fit a second degree polynomial to these points in the `fit_polynomials()` function in `6. Sliding Window and Fit Polynomial` of the Jupyter Notebook .
+We first check the histogram of the lower of image and find the two peaks for the left and right lines. Then we use the sliding window method to work our way upwards and find the relevant points in the image which mark the lane. Next, we use the `np.polyfit()` method to fit a second degree polynomial to these points in the `fit_polynomials()` function in `6. Sliding Window and Fit Polynomial` of the Jupyter Notebook [Advanced-Lane-Lines.ipynb](Advanced-Lane-Lines.ipynb).
 
 
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
-Given the detected points, we determine a second degree polynomial that fits these points, and then we calculate the radius of curvature of this polynomial. Also, we convert from the pixel space to real space in meters. I did this in `get_curvature()` function in `7. Calculate Curvature` of the Jupyter Notebbok .
+Given the detected points, we determine a second degree polynomial that fits these points, and then we calculate the radius of curvature of this polynomial. Also, we convert from the pixel space to real space in meters. I did this in `get_curvature()` function in `7. Calculate Curvature` of the Jupyter Notebbok [Advanced-Lane-Lines.ipynb](Advanced-Lane-Lines.ipynb) .
 
 #### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
