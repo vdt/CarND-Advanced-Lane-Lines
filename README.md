@@ -84,7 +84,7 @@ Given the detected points, we determine a second degree polynomial that fits the
 
 #### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
-I implemented this step in lines # through # in my code in `yet_another_file.py` in the function `map_lane()`.  Here is an example of my result on a test image:
+I implemented this step in `8. Process Image` in the Jupyter Notebook [Advanced-Lane-Lines.ipynb](Advanced-Lane-Lines.ipynb) in the function `process_image1()`.  Here is an example of my result on a test image:
 
 ![alt text][image6a]
 
