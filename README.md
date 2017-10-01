@@ -23,6 +23,7 @@ The goals / steps of this project are the following:
 [image4]: ./examples/warped_straight_lines.jpg "Warp Example"
 [image5]: ./examples/color_fit_lines.jpg "Fit Visual"
 [image6]: ./examples/example_output.jpg "Output"
+[image6a]: ./output_images/video-screenshot.png "Output"
 [video1]: ./project_video.mp4 "Video"
 
 ## [Rubric Points](https://review.udacity.com/#!/rubrics/571/view) 
@@ -85,7 +86,7 @@ Given the detected points, we determine a second degree polynomial that fits the
 
 I implemented this step in lines # through # in my code in `yet_another_file.py` in the function `map_lane()`.  Here is an example of my result on a test image:
 
-![alt text][image6]
+![alt text][image6a]
 
 ---
 
